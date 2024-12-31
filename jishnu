@@ -115,11 +115,8 @@ EOL
     Node() {
     git clone https://github.com/hydralabs-beta/daemon.git
     cd daemon
-    npm install    
- 
-    # update
-    update() {
-       sudo apt update
+    npm install  
+
 
 }
 # Main Menu
@@ -131,7 +128,6 @@ read -p "Enter your choice (1-3): " choice
 
 case $choice in
     1)
-        update
         check_dependencies
         install_panel
         ;;
