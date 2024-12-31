@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Update package list and install dependencies
+sudo apt update
+sudo apt install -y curl software-properties-common
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install nodejs -y 
+sudo apt install git -y
+
+
 
 # ASCII Art
 ascii_art="
