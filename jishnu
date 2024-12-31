@@ -48,9 +48,6 @@ else
 fi
 
 echo -e "${YELLOW}Detected OS: $DISTRO${NC}"
-# update
-update() {
-  sudo apt update
 
 # Check Dependencies
 check_dependencies() {
@@ -119,6 +116,10 @@ EOL
     git clone https://github.com/hydralabs-beta/daemon.git
     cd daemon
     npm install    
+ 
+    # update
+    update() {
+       sudo apt update
 
 }
 # Main Menu
@@ -133,7 +134,6 @@ case $choice in
         update
         check_dependencies
         install_panel
-        
         ;;
     2)
         Node
